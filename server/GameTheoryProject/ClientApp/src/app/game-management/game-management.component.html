@@ -1,0 +1,11 @@
+<p>game-management works!</p>
+
+<button class="navbar-toggler" type="button" (click)="onCreateGame()">
+  Create Game!
+</button>
+
+
+<ng-container *ngIf="game$ | async as game">
+<span> 228 {{ game | async }} </span>
+</ng-container>
+
