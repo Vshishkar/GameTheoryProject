@@ -1,4 +1,7 @@
+using System.Text;
 using GameTheoryProject.Database;
+using GameTheoryProject.Domain.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using TokenHandler = Microsoft.IdentityModel.Tokens.TokenHandler;
 
 namespace GameTheoryProject
 {
@@ -35,7 +40,20 @@ namespace GameTheoryProject
             
             services.AddDbContext<MainDbContext>(builder => 
                 builder.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
-                
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                    };
+                });
+            services.AddScoped<ITokenHandler, GameTheoryProject.Domain.Services.TokenHandler>();
+            services.AddScoped<IUserService, UserService>();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
         }
@@ -63,7 +81,11 @@ namespace GameTheoryProject
 
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            
+            app.UseAuthentication();
+
+            app.UseAuthorization();
             
             app.UseEndpoints(endpoints =>
             {

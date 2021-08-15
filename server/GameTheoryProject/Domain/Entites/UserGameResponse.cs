@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GameTheoryProject.Domain.Models
+namespace GameTheoryProject.Domain.Entites
 {
     public class UserGameResponse
     {

@@ -1,0 +1,19 @@
+<div class="container">
+  <form [formGroup]="loginForm">
+    <mat-card>
+      <span><h1>Welcome</h1> </span>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" id="username" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" id="password" type="password" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="OnSignUp()">
+        Sign In
+      </button>
+      <button mat-raised-button color="accent" [routerLink]="['/signup']">Sign Up</button>
+    </mat-card>
+  </form>
+</div>

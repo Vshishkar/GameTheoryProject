@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GameTheoryProject.Domain.Models
+namespace GameTheoryProject.Domain.Entites
 {
     public class Game
     {

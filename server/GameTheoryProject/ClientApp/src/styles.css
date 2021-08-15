@@ -14,3 +14,26 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+html,
+body,
+main {
+  height: 100%;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  background-color: #f5f5f5;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+app-root {
+  width: 100%;
+}

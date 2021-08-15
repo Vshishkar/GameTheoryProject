@@ -1,5 +1,5 @@
 ﻿using GameTheoryProject.Database.Configuration;
-using GameTheoryProject.Domain.Models;
+using GameTheoryProject.Domain.Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameTheoryProject.Database

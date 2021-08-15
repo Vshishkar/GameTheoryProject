@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GameTheoryProject.Domain.Models
+namespace GameTheoryProject.Domain.Entites
 {
     public class User
     {
@@ -10,6 +10,8 @@ namespace GameTheoryProject.Domain.Models
         public string Username { get; set; }
 
         public bool IsAdmin { get; set; }
+        
+        public string PasswordHash { get; set; }
 
         public IList<UserGameResponse> UserGameResponses { get; set; }
     }

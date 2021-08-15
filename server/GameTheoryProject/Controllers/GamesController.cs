@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using GameTheoryProject.Database;
-using GameTheoryProject.Domain.Models;
+using GameTheoryProject.Domain.Entites;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameTheoryProject.Controllers
@@ -16,6 +17,7 @@ namespace GameTheoryProject.Controllers
             _context = context;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<Game> Create()
         {

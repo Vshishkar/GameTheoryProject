@@ -1,4 +1,4 @@
-﻿using GameTheoryProject.Domain.Models;
+﻿using GameTheoryProject.Domain.Entites;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
