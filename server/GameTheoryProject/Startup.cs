@@ -89,12 +89,21 @@ namespace GameTheoryProject
 
             app.UseRouting();
 
-            app.UseCors(builder => builder
-                .WithOrigins("http://localhost:4200")
-                .AllowAnyHeader()
-                .AllowAnyMethod()
-                .AllowCredentials()
-            );
+
+            if (env.IsDevelopment())
+            {
+                app.UseCors(builder => builder
+                    .WithOrigins("http://localhost:4200")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                );    
+            }
+            else
+            {
+                app.UseCors();
+            }
+            
             
             app.UseAuthentication();
 
