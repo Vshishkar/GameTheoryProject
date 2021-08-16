@@ -1,6 +1,9 @@
-﻿using System.Threading.Tasks;
-using GameTheoryProject.Database;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using GameTheoryProject.Domain.Entites;
+using GameTheoryProject.Domain.Services;
+using GameTheoryProject.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,20 +13,39 @@ namespace GameTheoryProject.Controllers
     [Route("api/[controller]")]
     public class GamesController : ControllerBase
     {
-        private readonly MainDbContext _context;
+        private readonly IGameService _gameService;
 
-        public GamesController(MainDbContext context)
+        public GamesController(IGameService gameService)
         {
-            _context = context;
+            _gameService = gameService;
         }
 
         [Authorize]
-        [HttpPost]
-        public async Task<Game> Create()
+        [HttpPost("")]
+        public async Task<Game> Create([FromBody] CreateGameDto dto)
         {
-            var game = new Game();
-            var result =  await _context.Games.AddAsync(game);
-            return result.Entity;
+            return await _gameService.CreateGameAsync(dto);
+        }
+        
+        [Authorize]
+        [HttpDelete("delete")]
+        public async Task Delete([FromQuery] Guid gameId)
+        {
+            await _gameService.DeleteGameAsync(gameId);
+        }
+        
+        [Authorize]
+        [HttpGet("details")]
+        public async Task<GameDetailsDto> Details([FromQuery] Guid gameId)
+        {
+            return await _gameService.GetGameDetailsAsync(gameId);
+        }
+        
+        [Authorize]
+        [HttpGet("")]
+        public async Task<IEnumerable<GameDto>> GetList()
+        {
+            return await _gameService.GetAllGamesAsync();
         }
     }
 }

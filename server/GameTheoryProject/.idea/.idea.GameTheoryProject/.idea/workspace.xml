@@ -9,39 +9,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa94823-9594-4429-a7df-7caa4ed42a24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/UsersController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Services/ITokenHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Services/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Services/TokenHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Services/UserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dto/UserLoginDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dto/UserSignInDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dto/WebResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/PlayersController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/ExecutionContextService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/GameService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/IExecutionContextService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/IGameService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/IPlayerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Services/PlayerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dto/AnswerDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dto/CreateGameDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dto/GameDetailsDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dto/GameDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dto/JoinGameDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dto/PlayerGameDetails.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameTheoryProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameTheoryProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/service/authentification.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/service/authentification.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/material/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/material/material.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/GamesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GamesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Configuration/GameConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Configuration/GameConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Configuration/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Configuration/UserConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/Configuration/UserGameResponseConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Configuration/UserGameResponseConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/MainDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Database/MainDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entites/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entites/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/UserGameResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entites/UserGameResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameTheoryProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GameTheoryProject.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entites/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entites/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entites/UserGameResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entites/UserGameResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/WebResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/WebResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Migrations/MainDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/MainDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +54,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bdd96c5f630a45298dacc07d80deb23b29178/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1bc366d2ba144bc5a17e08d4f35f238b8f5578/2C4/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F1D061AC-D27D-4E95-B449-30527EE3091F/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3449c9e5c9104477a00334ec14e9e98c16788/0/ClaimTypes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -89,8 +85,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.27701777" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.23803009" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -99,6 +95,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\vshis\RiderProjects\GameTheoryProject\server\GameTheoryProject\ClientApp\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.GameTheoryProject">
@@ -152,7 +149,7 @@
       <updated>1628514079622</updated>
       <workItem from="1628514104170" duration="818000" />
       <workItem from="1628926291866" duration="4649000" />
-      <workItem from="1628965998629" duration="7854000" />
+      <workItem from="1628965998629" duration="21532000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,8 @@ namespace GameTheoryProject.Domain.Entites
     {
         public Guid GameId { get; set; }
 
+        public string Title { get; set; }
+
         public IList<UserGameResponse> UserGameResponses { get; set; }
     }
 }

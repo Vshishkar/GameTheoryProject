@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
+import { Router, ActivatedRoute } from "@angular/router";
 import { AuthentificationService } from "../service/authentification.service";
 
 @Component({
@@ -8,6 +9,8 @@ import { AuthentificationService } from "../service/authentification.service";
   styleUrls: ["./log-in.component.css"],
 })
 export class LogInComponent implements OnInit {
+  returnUrl: string;
+
   loginForm = this.fb.group({
     username: ["", Validators.required],
     password: ["", Validators.required],
@@ -15,15 +18,20 @@ export class LogInComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthentificationService
+    private authService: AuthentificationService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.queryParams.subscribe(x => this.returnUrl = x['return'] || "");
+  }
 
   public OnSignUp() {
     this.authService.signIn(
       this.loginForm.value["username"],
       this.loginForm.value["password"]
     );
+    this.router.navigateByUrl(this.returnUrl);
   }
 }

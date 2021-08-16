@@ -18,15 +18,25 @@ namespace GameTheoryProject.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<string> Login([FromBody] UserLoginDto dto)
+        public async Task<WebResponse<string>> Login([FromBody] UserLoginDto dto)
         {
-            return await _userService.LogInUserAsync(dto.Username, dto.Password);
+            var accessToken = await _userService.LogInUserAsync(dto.Username, dto.Password);
+            return new WebResponse<string>
+            {
+                Success = true,
+                Data = accessToken,
+            };
         }
         
         [HttpPost("register")]
-        public async Task<string> Register([FromBody] UserSignInDto dto)
+        public async Task<WebResponse<string>> Register([FromBody] UserSignInDto dto)
         {
-            return await _userService.SignInUserAsync(dto.Username, dto.Password);
+            var accessToken = await _userService.SignInUserAsync(dto.Username, dto.Password);
+            return new WebResponse<string>
+            {
+                Success = true,
+                Data = accessToken,
+            };
         }
 
         [Authorize]

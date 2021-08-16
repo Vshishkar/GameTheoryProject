@@ -1,0 +1,33 @@
+<p>game works!</p>
+<ng-container> </ng-container>
+
+<ng-container *ngIf="isJoined$ | async as isJoined">
+  <ng-container *ngIf="isJoined.data">
+    <ng-container *ngIf="gameDetails$ | async as gameDetails">
+      {{ gameDetails | json }}
+
+      <div>
+        <form [formGroup]="submitAnswerForm">
+          <mat-form-field>
+            <mat-label>Title </mat-label>
+            <input
+              matInput
+              formControlName="answer"
+              type="number"
+              id="answer"
+            />
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="onSubmitAnswer()">
+            Submit Answer!
+          </button>
+        </form>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="!isJoined.data">
+    <button mat-raised-button color="primary" (click)="onGameClicked()">
+      Join Game!
+    </button></ng-container
+  >
+</ng-container>
+<ng-container *ngIf="!isJoined$ | async as isJoined"> JOIN! </ng-container>

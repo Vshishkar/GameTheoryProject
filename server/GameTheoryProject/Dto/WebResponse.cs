@@ -2,7 +2,7 @@
 
 namespace GameTheoryProject.Dto
 {
-    public class WebResponse<T> where T : class
+    public class WebResponse<T>
     {
         public bool Success { get; set; }
 

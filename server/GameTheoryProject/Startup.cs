@@ -51,8 +51,14 @@ namespace GameTheoryProject
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                     };
                 });
+
+            services.AddHttpContextAccessor();
+            
+            services.AddScoped<IExecutionContextService, ExecutionContextService>();
             services.AddScoped<ITokenHandler, GameTheoryProject.Domain.Services.TokenHandler>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IGameService, GameService>();
+            services.AddScoped<IPlayerService, PlayerService>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
