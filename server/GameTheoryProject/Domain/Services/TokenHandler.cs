@@ -23,7 +23,7 @@ namespace GameTheoryProject.Domain.Services
             var key = _configuration["Jwt:Key"];
             var claims = new List<Claim>()
             {
-                new Claim(ClaimTypes.Name, user.Username),
+                new Claim("username", user.Username),
                 new Claim("isAdmin", user.IsAdmin.ToString()),
                 new Claim("userId", user.UserId.ToString()),
             };
@@ -31,7 +31,7 @@ namespace GameTheoryProject.Domain.Services
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));        
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);           
             var tokenDescriptor = new JwtSecurityToken("none", "none", claims, 
-                expires: DateTime.Now.AddMinutes(60), signingCredentials: credentials);        
+                expires: DateTime.Now.AddDays(1), signingCredentials: credentials);        
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
         }
     }

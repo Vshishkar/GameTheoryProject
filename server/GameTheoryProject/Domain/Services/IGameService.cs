@@ -15,5 +15,9 @@ namespace GameTheoryProject.Domain.Services
         Task<GameDetailsDto> GetGameDetailsAsync(Guid gameId);
 
         Task DeleteGameAsync(Guid gameId);
+
+        Task<Game> StartGame(Guid gameId);
+        
+        Task<Game> FinishGame(Guid gameId);
     }
 }

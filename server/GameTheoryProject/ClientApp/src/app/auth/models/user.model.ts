@@ -4,11 +4,12 @@ export class User {
   constructor(
     public userId: string,
     public isAdmin: boolean,
-    public username: string) {}
+    public username: string
+  ) {}
 }
 
 export interface UserPayload extends JwtPayload {
   userId: string;
   isAdmin: boolean;
-  name: string;
+  username: string;
 }

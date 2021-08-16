@@ -24,14 +24,27 @@ export class LogInComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(x => this.returnUrl = x['return'] || "");
+    this.route.queryParams.subscribe(
+      (x) => (this.returnUrl = x["return"] || "")
+    );
+  }
+
+  OnSignIn() {
+    this.router.navigate(["/signup"], {
+      queryParams: {
+        return: this.returnUrl,
+      },
+    });
   }
 
   public OnSignUp() {
-    this.authService.signIn(
-      this.loginForm.value["username"],
-      this.loginForm.value["password"]
-    );
-    this.router.navigateByUrl(this.returnUrl);
+    this.authService
+      .signIn(
+        this.loginForm.value["username"],
+        this.loginForm.value["password"]
+      )
+      .subscribe((x) => {
+        this.router.navigateByUrl(this.returnUrl);
+      });
   }
 }

@@ -1,0 +1,54 @@
+<div class="rules">
+  <h6>
+    Rules: each player will submit a number from range of 1 to 100(included).
+    Then, we will calculate average of all numbers and divide that average by 2.
+    Winner is a person, who submitted the closet number to resut of our
+    calculations (avg/ 2)
+  </h6>
+</div>
+
+<ng-container *ngIf="isFinished()">
+  <h4>{{ gameResultBanner() }}</h4></ng-container
+>
+
+<ng-container *ngIf="isStarted()">
+  <ng-container *ngIf="hideForm"
+    ><ng-container *ngIf="!isFinished()">
+      <div>
+        <h4>Thanks for your answer!</h4>
+        <h6>My answer: {{ gameDetails.answer }}</h6>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="!hideForm">
+    <form [formGroup]="submitForm">
+      <h4>Please, submit your answer!</h4>
+      <mat-form-field>
+        <mat-label>Answer </mat-label>
+        <input
+          matInput
+          formControlName="answer"
+          min="1"
+          max="100"
+          type="number"
+          id="answer"
+        />
+      </mat-form-field>
+      <div>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!submitForm.valid"
+          (click)="onSubmitted()"
+        >
+          Submit Answer!
+        </button>
+      </div>
+    </form>
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="isInDraft()">
+  <h4>Wait for admin! Game will start soon.</h4>
+</ng-container>

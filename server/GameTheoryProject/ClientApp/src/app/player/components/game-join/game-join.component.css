@@ -1,0 +1,11 @@
+:host {
+  width: 100%;
+  max-width: 720px;
+  padding: 32px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  margin-top: 32px;
+}

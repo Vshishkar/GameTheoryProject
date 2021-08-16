@@ -1,8 +1,19 @@
-<p>game-details works!</p>
 <div>
-  {{ gameDetails | json }}
+  <span> Title: {{ gameDetails.gameTitle }} </span>
+  <span> Status: {{ gameDetails.status }} </span>
+
+  <div>
+    Players:
+    <div *ngFor="let player of gameDetails.players" [style.color]="player.isWinner ? 'green': 'black'">>
+      {{ player.username }} {{ player.isWinner }}
+    </div>
+  </div>
 </div>
 
 <ng-container *ngIf="link">
-  <a href="{{link}}">Link to the game </a>
+  <a href="{{ link }}">Link to the game </a>
 </ng-container>
+
+<button mat-raised-button color="primary" (click)="onActionClicked()">
+  {{ buttonText }}
+</button>

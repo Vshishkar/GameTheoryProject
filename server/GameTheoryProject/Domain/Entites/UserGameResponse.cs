@@ -13,5 +13,7 @@ namespace GameTheoryProject.Domain.Entites
         public User User { get; set; }
 
         public int? Number { get; set; }
+
+        public bool IsWinner { get; set; }
     }
 }

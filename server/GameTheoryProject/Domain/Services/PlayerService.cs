@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using GameTheoryProject.Database;
 using GameTheoryProject.Domain.Entites;
@@ -44,6 +46,11 @@ namespace GameTheoryProject.Domain.Services
                 .SingleAsync(x => x.GameId == game.GameId &&
                                   x.UserId == user.UserId);
 
+            if (response.Number.HasValue)
+            {
+                throw new InvalidOperationException("Cannot submit twice");
+            }
+            
             response.Number = answerDto.Answer;
             
             _mainDbContext.UserGameResponses.Update(response);
@@ -59,7 +66,16 @@ namespace GameTheoryProject.Domain.Services
             var response = await _mainDbContext.UserGameResponses
                 .SingleAsync(x => x.GameId == game.GameId &&
                                   x.UserId == user.UserId);
-            return new PlayerGameDetails(game.Title, response.Number);
+
+            IList<GameWinner> winners = new List<GameWinner>();
+            if (game.Status == GameStatus.Done)
+            {
+                winners =  await _mainDbContext.UserGameResponses
+                    .Where(x => x.IsWinner && x.GameId == gameId)
+                    .Select(x => new GameWinner(x.UserId, x.Number)).ToListAsync();
+            }
+            
+            return new PlayerGameDetails(game.Title, game.Status, response.Number, winners);
         }
 
         public async Task<bool> IsUserJoinedAsync(Guid gameId)
@@ -67,9 +83,11 @@ namespace GameTheoryProject.Domain.Services
             var user = await _executionContextService.GetCurrentUserAsync();
             var game = await _mainDbContext.Games.SingleAsync(x => x.GameId == gameId);
             
-            return await _mainDbContext.UserGameResponses
+            var isJoined = await _mainDbContext.UserGameResponses
                 .AnyAsync(x => x.GameId == game.GameId &&
-                                  x.UserId == user.UserId);
+                               x.UserId == user.UserId);
+
+            return isJoined;
         }
     }
 }

@@ -52,6 +52,8 @@ namespace GameTheoryProject
                     };
                 });
 
+            services.AddSignalR();
+            
             services.AddHttpContextAccessor();
             
             services.AddScoped<IExecutionContextService, ExecutionContextService>();
@@ -87,7 +89,12 @@ namespace GameTheoryProject
 
             app.UseRouting();
 
-            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            app.UseCors(builder => builder
+                .WithOrigins("http://localhost:4200")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+            );
             
             app.UseAuthentication();
 
@@ -98,6 +105,8 @@ namespace GameTheoryProject
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+
+                endpoints.MapHub<PlayersHub>("/api/playersHub");
             });
 
             app.UseSpa(spa =>

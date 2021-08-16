@@ -12,6 +12,14 @@ export class GameService {
     @Inject("API_URL") private baseUrl: string
   ) {}
 
+  public startGame(gameId: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/games/start`, { gameId: gameId });
+  }
+
+  public finishGame(gameId: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/games/finish`, { gameId: gameId });
+  }
+
   public createGame(game: CreateGame): Observable<Game> {
     return this.http.post<Game>(`${this.baseUrl}/games`, game);
   }

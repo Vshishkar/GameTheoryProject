@@ -28,6 +28,20 @@ namespace GameTheoryProject.Controllers
         }
         
         [Authorize]
+        [HttpPost("start")]
+        public async Task<Game> StartGame([FromBody] GameActionDto dto)
+        {
+            return await _gameService.StartGame(dto.GameId);
+        }
+        
+        [Authorize]
+        [HttpPost("finish")]
+        public async Task<Game> FinishGame([FromBody] GameActionDto dto)
+        {
+            return await _gameService.FinishGame(dto.GameId);
+        }
+        
+        [Authorize]
         [HttpDelete("delete")]
         public async Task Delete([FromQuery] Guid gameId)
         {

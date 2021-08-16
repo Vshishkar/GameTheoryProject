@@ -1,8 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { GameComponent } from "./components/game/game.component";
+import { AuthGuard } from "../auth/auth.guard";
+import { GameContainerComponent } from "./components/game-container/game-container.component";
 
-const routes: Routes = [{ path: "game/:gameId", component: GameComponent }];
+const routes: Routes = [
+  {
+    path: "game/:gameId",
+    component: GameContainerComponent,
+    canActivate: [AuthGuard],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

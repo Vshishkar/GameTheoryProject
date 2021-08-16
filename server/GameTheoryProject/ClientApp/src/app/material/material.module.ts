@@ -8,6 +8,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list";
 import { MatDividerModule } from "@angular/material/divider";
+import { MatTableModule } from "@angular/material/table";
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { MatDividerModule } from "@angular/material/divider";
     MatButtonModule,
     MatListModule,
     MatDividerModule,
+    MatTableModule,
   ],
   exports: [
     MatCardModule,
@@ -25,6 +27,7 @@ import { MatDividerModule } from "@angular/material/divider";
     MatButtonModule,
     MatListModule,
     MatDividerModule,
+    MatTableModule,
   ],
   providers: [
     {
