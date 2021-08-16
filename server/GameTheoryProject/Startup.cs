@@ -101,7 +101,7 @@ namespace GameTheoryProject
             }
             else
             {
-                app.UseCors();
+                app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             }
             
             
