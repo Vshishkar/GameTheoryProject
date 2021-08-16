@@ -13,7 +13,13 @@ namespace GameTheoryProject
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args)
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                    logging.AddConsole();
+                }).Build()
+                .Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
