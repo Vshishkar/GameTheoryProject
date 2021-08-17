@@ -59,9 +59,9 @@ export class GameDetailsComponent implements OnChanges {
       this.gameDetails.winners.filter((x) => x.userId == this.user.userId)
         .length > 0;
     if (isWinner) {
-      return "Contratulations! You win!";
+      return "Congratulations! You win!";
     } else {
-      return "Sorry, looks like you did win :(";
+      return "Sorry, looks like you didn't win :(";
     }
   }
 }

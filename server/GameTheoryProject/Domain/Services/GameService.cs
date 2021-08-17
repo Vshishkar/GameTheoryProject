@@ -54,6 +54,8 @@ namespace GameTheoryProject.Domain.Services
                 game.GameId,
                 game.Title,
                 game.Status,
+                game.WinningNumber,
+                game.AverageByHalf,
                 game.UserGameResponses
                     .Select(x =>
                         new PlayerDto(x.UserId, x.User.Username, x.Number, x.IsWinner))
@@ -144,6 +146,10 @@ namespace GameTheoryProject.Domain.Services
 
             _mainDbContext.UserGameResponses.UpdateRange(winners);
 
+            game.WinningNumber = winnerNumberLess;
+            game.AverageByHalf = specialNumber;
+            _mainDbContext.Games.Update(game);
+            
             await _mainDbContext.SaveChangesAsync();
             await _hubContext.Clients.All.NotifyGameStatus(GameStatus.Done, gameId, 123);
             

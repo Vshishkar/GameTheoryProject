@@ -30,16 +30,19 @@ export class LogInComponent implements OnInit {
   }
 
   OnSignIn() {
-    this.router.navigate(["/signup"], {
-      queryParams: {
-        return: this.returnUrl,
-      },
-    });
+    this.authService
+      .signIn(
+        this.loginForm.value["username"],
+        this.loginForm.value["password"]
+      )
+      .subscribe((x) => {
+        this.router.navigateByUrl(this.returnUrl);
+      });
   }
 
   public OnSignUp() {
     this.authService
-      .signIn(
+      .signUp(
         this.loginForm.value["username"],
         this.loginForm.value["password"]
       )

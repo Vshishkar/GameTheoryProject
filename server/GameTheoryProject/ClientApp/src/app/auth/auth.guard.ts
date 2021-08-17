@@ -26,7 +26,6 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-      console.log("at auth guard");
       if (this.authService.isAuthrorised()) {
         return true;
       } else {

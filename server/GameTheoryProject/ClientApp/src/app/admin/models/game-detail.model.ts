@@ -4,11 +4,13 @@ export interface GameDetails {
   gameId: string;
   gameTitle: string;
   status: GameStatus;
+  winningNumber: number;
+  averageByHalf: number;
   players: Array<{
     username: string;
     userId: string;
     gameRespose?: number;
-  }>
+  }>;
 }
 
 export interface CreateGame {

@@ -25,11 +25,17 @@ namespace GameTheoryProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<double?>("AverageByHalf")
+                        .HasColumnType("float");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("WinningNumber")
+                        .HasColumnType("int");
 
                     b.HasKey("GameId");
 

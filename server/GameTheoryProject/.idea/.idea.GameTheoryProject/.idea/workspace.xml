@@ -8,35 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa94823-9594-4429-a7df-7caa4ed42a24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Domain/Entites/GameStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Services/PlayersHub.cs" afterDir="false" />
+    <list default="true" id="2fa94823-9594-4429-a7df-7caa4ed42a24" name="Default Changelist" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameTheoryProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameTheoryProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/admin/components/game-details/game-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/admin/components/game-details/game-details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/admin/components/game-details/game-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/admin/components/game-details/game-details.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/admin/models/game-detail.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/admin/models/game-detail.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/admin/services/game.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/admin/services/game.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/models/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/log-in/log-in.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth/service/authentification.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/auth/service/authentification.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/player/models/player.models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/player/models/player.models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/player/player-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/player/player-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/player/player.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/player/player.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/GamesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GamesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/player/components/game-details/game-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/player/components/game-details/game-details.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Entites/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entites/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entites/UserGameResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entites/UserGameResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Services/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Services/GameService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Services/IGameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Services/IGameService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Services/PlayerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Services/PlayerService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Services/TokenHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Services/TokenHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dto/CreateGameDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/CreateGameDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dto/GameDetailsDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/GameDetailsDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dto/GameDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/GameDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dto/PlayerGameDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/PlayerGameDetails.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Migrations/MainDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/MainDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +39,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1bc366d2ba144bc5a17e08d4f35f238b8f5578/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f6c8f890b9d4be0922564a2e6d2dfa262778/fb/a7b93a98/IHubClients`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bdd96c5f630a45298dacc07d80deb23b29178/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5f6c8f890b9d4be0922564a2e6d2dfa262778/A/ClientProxyExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bdd96c5f630a45298dacc07d80deb23b29178/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1bc366d2ba144bc5a17e08d4f35f238b8f5578/2C4/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f6c8f890b9d4be0922564a2e6d2dfa262778/9c/f2191656/IHubCallerClients.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F1D061AC-D27D-4E95-B449-30527EE3091F/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
@@ -158,8 +140,31 @@
       <workItem from="1628514104170" duration="818000" />
       <workItem from="1628926291866" duration="4649000" />
       <workItem from="1628965998629" duration="21583000" />
-      <workItem from="1629129076631" duration="10691000" />
+      <workItem from="1629129076631" duration="13909000" />
+      <workItem from="1629182988027" duration="800000" />
     </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1629146406522</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629146406522</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed">
+      <created>1629147578686</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629147578686</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix">
+      <created>1629148022159</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629148022159</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,5 +184,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="fixed" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

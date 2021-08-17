@@ -11,7 +11,7 @@ import { WebResponse } from "src/app/models/web-response.model";
 })
 export class AuthentificationService {
   private accessToken$ = new BehaviorSubject<string>(
-    localStorage.getItem("access_token")
+    localStorage.getItem("g_access_token")
   );
   private user$: Observable<User>;
 
@@ -50,7 +50,7 @@ export class AuthentificationService {
         tap(
           (x) => {
             this.accessToken$.next(x.data);
-            localStorage.setItem("access_token", x.data);
+            localStorage.setItem("g_access_token", x.data);
           },
           (e) => console.log(e)
         )

@@ -12,5 +12,9 @@ namespace GameTheoryProject.Domain.Entites
         public GameStatus Status { get; set; }
 
         public IList<UserGameResponse> UserGameResponses { get; set; }
+
+        public int? WinningNumber { get; set; }
+
+        public double? AverageByHalf { get; set; }
     }
 }
